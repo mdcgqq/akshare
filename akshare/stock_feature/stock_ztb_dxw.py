@@ -13,4 +13,10 @@ import pandas as pd
 import requests
 
 def _dxwsign(values:dict):
-    pass
+    sorted_keys = sorted(values.keys())
+    headers = []
+    for key in sorted_keys:
+        value = values[key]
+        headers.append(f"{key}:{value}")
+    headers_str = "".join(headers)
+    return
